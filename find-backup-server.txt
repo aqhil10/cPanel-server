@@ -1,0 +1,3 @@
+# Use below command to find the backup server info
+
+serverbackup-setup --list-key
