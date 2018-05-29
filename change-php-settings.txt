@@ -1,0 +1,14 @@
+# find the php version of the user
+# find the user name of cPanel account
+
+cd /etc/cl.php.d/alt-phpxx/
+
+# replace xx with the php version of the cPanel account.
+
+cagefsctl -e xxxxxx
+
+# replace xxxxxx with the cPanel username
+
+vim alt_php.ini
+
+# add / modify the required values and save.
