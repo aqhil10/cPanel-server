@@ -1,1 +1,25 @@
+Here are some useful exim commands.  They're useful if you have an overloaded queue and need to clear it out, or find out why the messagse are being piled up.
 
+exim -M id            #Try to send the message with id id
+
+exim -qf              #Tell exim to process the entire queue again
+exim -qff             #same as qf, but it will flush the frozen messages
+
+exim -Mvl id          #view the message log for message id
+exim -Mvh id          #view message id's headers
+exim -Mvb id          #view message id's body
+exim -Mrm id          #remove message id from the queue
+exim -Mg id           #fail and send a bounce to the sender
+exim -bp | exiqsumm    #Print summary of the messages in the queue
+exiwhat               #show what exim is doing right now
+exim -bpc             #show number of messages in the queue
+exim -bp              #print list of messages in the queue
+
+The manual way to remove the entire queue is as follows
+
+cd /var/spool
+mv exim exim.old
+mkdir -p exim/input
+mkdir -p exim/msglog
+mkdir -p exim/db
+chown -R mail:mail exim
