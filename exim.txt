@@ -10,7 +10,7 @@ exim -Mvh id          #view message id's headers
 exim -Mvb id          #view message id's body
 exim -Mrm id          #remove message id from the queue
 exim -Mg id           #fail and send a bounce to the sender
-exim -bp | exiqsumm    #Print summary of the messages in the queue
+exim -bp | exiqsumm   #Print summary of the messages in the queue
 exiwhat               #show what exim is doing right now
 exim -bpc             #show number of messages in the queue
 exim -bp              #print list of messages in the queue
