@@ -108,3 +108,13 @@ So we can see that all 1,763 messages the user01@example.com user sent out, all 
 
 
     It would also be recommended to change the email password in cPanel for the email account being used to send this spam. As otherwise the spammer could possibly come back from another computer with a different IP address and still attempt to relay spam out through your account. 
+    
+    *******************************************************
+    
+    exim -bpr | grep "<" | awk {'print $4'} | cut -d "<" -f 2 | cut -d ">" -f 1 | sort -n | uniq -c | sort -nr | head
+      3 jawid.angaar@fichtner.af
+      2 root@pcloud.yourserverprovider.com
+      2 m.rodieck@mec.af
+      1 matin.karimi@mec.af
+      1 ch.sarag@mec.af
+
